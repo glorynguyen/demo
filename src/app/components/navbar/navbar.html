@@ -1,0 +1,19 @@
+<div class="right-side">
+  <div class="message-container">
+    <div class="message-line" ng-repeat="item in main.messageList" ng-class="{'they-answer' : item.isThey}">
+      <div class="message message{{$index}}" ng-class="{'keep-opacity' : main.messageList.length < main.maximunMessage}"> {{item.message}}</div>
+    </div>
+    <div class="spliter">
+      <div class="icon"></div>
+    </div>
+    <!-- <div class="message-line"><span class="message"> Welcome to Freestyle</span></div>
+    <div class="message-line"><span class="message"> Should I tell more about us or do you want to be</span></div> -->
+    <div class="direction" ng-show="main.showDirection">
+      <div class="direction-item" ng-click="main.directionClick('tell')">Tell me more</div>
+      <div class="direction-item" ng-click="main.directionClick('contact')">Contact me</div>
+    </div>
+    <div class="direction" ng-show="main.showDirectionWork">
+      <div ng-repeat="item in main.directionTellMeMoreItems" class="direction-item" ng-click="main.directionWorkClick(item)">{{item.title}}</div>
+    </div>
+  </div>
+</div>

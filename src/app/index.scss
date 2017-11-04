@@ -1,0 +1,369 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+
+$main-item-width: 406px;
+$main-item-height: 256px;
+$brand-item-width: 465px;
+$brand-item-height: 290px;
+
+.right-side {
+  width: 30%;
+  height: 100%;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+html, body, .body-container, .main-view{
+  margin:0;
+  padding:0;
+  height:100%;
+
+  .left-side {
+    width: 812px;
+    height: 100%;
+
+    &.brand-view {
+      width: 930px;
+    }
+
+    .list-items {
+      td {
+        position: relative;
+      }
+      
+      .item1 {
+        a {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+      }
+      .item2 {
+        a {
+          position: absolute;
+          left: $main-item-width;
+          top: 0px;
+          &.brand-view {
+            left: $brand-item-width;
+          }
+        }
+      }
+      .item3 {
+        a {
+          position: absolute;
+          left: 0px;
+          top: $main-item-height;
+          &.brand-view {
+            top: $brand-item-height;
+          }
+        }
+      }
+      .item4 {
+        a {
+          position: absolute;
+          left: $main-item-width;
+          top: $main-item-height;
+          &.brand-view {
+            left: $brand-item-width;
+            top: $brand-item-height;
+          }
+        }
+      }
+      .item5 {
+        a {
+          position: absolute;
+          left: $main-item-width;
+          top: $main-item-height;
+          &.brand-view {
+            left: 0;
+            top: $brand-item-height * 2;
+          }
+        }
+      }
+      .item6 {
+        a {
+          position: absolute;
+          left: $main-item-width;
+          top: $main-item-height;
+          &.brand-view {
+            left: $brand-item-width;
+            top: $brand-item-height* 2;
+          }
+        }
+      }
+      .item {
+        width: $main-item-width;
+        height: $main-item-height;
+        position: relative;
+      }
+      .item-brand {
+        width: $brand-item-width;
+        height: $brand-item-height;
+        position: relative;
+      }
+      .text-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        width: $main-item-width;
+        height: $main-item-height;
+
+        &.brand-view {
+          width: $brand-item-width;
+          height: $brand-item-height;
+        }
+
+
+        .inner {
+          display: table;
+          table-layout: fixed;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          .content {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            .text {
+              display: inline-block;
+              margin: 0 auto;
+              -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+              -moz-transition: opacity 0.2s ease-in-out, -moz-transform 0.2s ease-in-out;
+              -o-transition: opacity 0.2s ease-in-out, -o-transform 0.2s ease-in-out;
+              transition: opacity 0.2s ease-in-out,-webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+              zoom: 1;
+              filter: alpha(opacity=0);
+              -webkit-opacity: 0;
+              -moz-opacity: 0;
+              opacity: 0;
+              -webkit-transform: scale(0.9);
+              -moz-transform: scale(0.9);
+              -o-transform: scale(0.9);
+              -ms-transform: scale(0.9);
+              transform: scale(0.9);
+              .t-entry {
+                width: 100%;
+                .t-entry-title {
+                  font-size: 20px;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .item-overlay {
+        background-color: rgb(32, 113, 181);
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        width: $main-item-width;
+        height: $main-item-height;
+        z-index: 2;
+
+        &.brand-view {
+          width: $brand-item-width;
+          height: $brand-item-height;
+        }
+      }
+
+      .image-container {
+        width: $main-item-width;
+        height: $main-item-height;
+        overflow: hidden;
+
+        &.brand-view {
+          width: $brand-item-width;
+          height: $brand-item-height;
+        }
+      }
+
+      img {
+        -webkit-transition-property: -webkit-transform, -webkit-filter;
+        -moz-transition-property: -moz-transform, -moz-filter;
+        -o-transition-property: -o-transform, filter;
+        transition-property: -webkit-transform,-moz-transform,-o-transform,transform,-webkit-filter,-moz-filter,-o-filter,filter;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+        -moz-transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+        -o-transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+        transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+        z-index: 1;
+        position: relative;
+      }
+
+      img:hover {
+        -webkit-transform: scale(1.05, 1.05);
+        -moz-transform: scale(1.05, 1.05);
+        -o-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05);
+      }
+    }
+    
+    .brand-footer {
+      width: 930px;
+      height: 154px;
+      background-image: url('../assets/images/brand-footer.png');
+      position: relative;
+      margin-top: 3 * $brand-item-height;
+      margin-left: 0;
+    }
+  
+  }
+
+  .right-zone {
+    width: 200px;
+    height: 100%;
+  }
+
+  
+}
+
+.main-view {
+  overflow-x: hidden;
+  display: flex;
+}
+
+.right-side {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 510px;
+  height: 100%;
+  z-index: 10;
+  background: transparent; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(left, transparent , rgba(0, 0, 0, 0.7098039215686275)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, transparent, rgba(0, 0, 0, 0.7098039215686275)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, transparent, rgba(0, 0, 0, 0.7098039215686275)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, transparent , rgba(0, 0, 0, 0.7098039215686275)); /* Standard syntax (must be last) */
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+    .spliter {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 31px;
+      margin-bottom: 28px;
+      .icon {
+        width: 44px;
+        height: 10px;
+        background-image: url('../assets/images/spliter.png');
+      }
+    }
+
+    .message-line {
+      margin: 3px 0px;
+      display: flex;
+      .message {
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+        border-radius: 50px;
+        padding: 12px 28px;
+        margin: 0;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        background-color: rgba(155, 155, 155, 0.6196078431372549);
+        color: white;
+        font-weight: normal;
+        max-width: 300px;
+        letter-spacing: 1.36px;
+      }
+      .message0 {
+        opacity: 0.3;
+      }
+      .message1 {
+        opacity: 0.6;
+      }
+      .keep-opacity {
+        opacity: 1 !important;
+      }
+    }
+
+    .they-answer {
+      justify-content: flex-end;
+      .message {
+        background: white;
+        color: #106DB8;
+        font-weight: bold;
+      }
+    }
+
+    .direction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px 0px;
+      flex-wrap: wrap;
+      .direction-item {
+        outline: none;
+        padding: 6px 28px;
+        margin: 10px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        color: #106DB8;
+        cursor: pointer;
+        border-radius: 50px;
+        background-color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.header-image-main {
+  background-image: url('../assets/images/header.png');
+  width: 812px;
+  height: 512px;
+}
+
+
+
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
