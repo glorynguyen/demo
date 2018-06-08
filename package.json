@@ -4,7 +4,7 @@
   "dependencies": {},
   "scripts": {
     "test": "gulp test",
-    "start": "gulp serve"
+    "start": "npm install && gulp serve"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
